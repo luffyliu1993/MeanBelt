@@ -1,0 +1,41 @@
+<div id="container">
+    <p class="errors" ng-repeat="error in errors" ng-bind="error.message"></p>
+    <h2>Bucket List</h2>
+    <div id="register">
+        <h3>Register</h3>
+        <form  ng-submit="create()">
+            <label>
+                Email: <input type="text"  ng-model="registerUser.email"/>
+            </label>
+            <label>
+                User Name: <input type="text" ng-model="registerUser.userName" />
+            </label>
+            <label>
+                First Name: <input type="text" ng-model="registerUser.firstName"/>
+            </label>
+            <label>
+                Last Name: <input type="text" ng-model="registerUser.lastName"/>
+            </label>
+            <label>
+                Password: <input type="password" ng-model="registerUser.password"/>
+            </label>
+            <label>
+                Password Confirm: <input type="password" ng-model="registerUser.passwordConfirm"/>
+            </label>
+            <input id="register_button" type="submit" value="Register" />
+        </form>
+    </div>
+
+    <div id="login">
+        <h3>Login</h3>
+        <form  ng-submit="findUser()">
+            <label>
+                Email: <input type="text" ng-model="loginUser.email"/>
+            </label>
+            <label>
+                Password: <input type="password" ng-model="loginUser.password"/>
+            </label>
+            <input id="login_button" type="submit" value="Login" />
+        </form>
+    </div>
+</div>

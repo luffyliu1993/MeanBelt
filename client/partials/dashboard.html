@@ -1,0 +1,31 @@
+<h3>Bucket List</h3>
+<button ng-click="home()">Home</button>
+<button ng-click="logout()">Logout</button>
+<h1>Welcome, {{userData.userName}}!</h1>
+
+<form ng-submit="createBucket()">
+    <input type="text" placeholder="Title" ng-model="bucket.title"/>
+    <input type="text" placeholder="Description" ng-model="bucket.desc"/>
+    <select ng-model="bucket.taggedUser" ng-options="ou as ou.userName for ou in otherUsers ">
+        <option value="Select">
+            Select
+        </option>
+    </select>
+    <input type="submit" value="Add to List" />
+</form>
+
+<p>
+    Before I die I want to...
+</p>
+<div ng-repeat="bucket in userData.buckets">
+    <p>
+        {{bucket.title}} - {{bucket.desc}} - {{bucket.createdAt}}
+    </p>
+</div>
+
+<p>
+    List of other users (Click to view profile)
+</p>
+<p ng-repeat="u in otherUsers track by $index">
+    <a href="#!/user/{{$index}}">{{u.userName}}</a>
+</p>

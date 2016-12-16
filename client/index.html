@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <!--Write your own title here-->
+        <title></title>
+        <!--get anuglar from bower_components-->
+       <script src="angular/angular.js"></script>
+       <script src="angular-route/angular-route.js"></script>
+       <!--end getting angular-->
+       <script src="assests/app.js"></script>
+       <!--link the factory and controller files below-->
+       <script src="assests/factories/usersFactory.js"></script>
+       <script src="assests/controllers/userController.js"></script>
+       <!--end of linking factory and controller files-->
+       <!--linking css files-->
+       <link type="text/css" rel="stylesheet" href="static/login_style.css" />
+       <!--end for css files-->
+    </head>
+    <body>
+        <!--usually there is a ng-view here-->
+        <div ng-view="">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+<h3>Bucket List</h3>
+<button ng-click="home()">Home</button>
+<button ng-click="logout()">Logout</button>
+<h4>{{specificUser.userName}}'s Bucket List</h4>
+<p ng-repeat="bucket in specificUser.buckets">
+    {{bucket.title}} - {{bucket.desc}} - {{bucket.createdAt}}
+</p>
